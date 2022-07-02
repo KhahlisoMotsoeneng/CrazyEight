@@ -1,6 +1,7 @@
 package khahliso.Commands;
 
 import khahliso.Cards;
+import khahliso.Game;
 import khahliso.Player;
 
 public class HelpCommand extends Commands{
@@ -10,7 +11,7 @@ public class HelpCommand extends Commands{
     }
 
     @Override
-    public boolean execute(Player player, Cards cards) {
+    public boolean execute(Player player, Cards cards, Game game) {
         System.out.println("Don't Worry, You Got This!");
         player.setStatus("I can understand these commands:\n"+
                 "PULL - If you don't have a matching card to put on the table, \n" +

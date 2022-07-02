@@ -1,6 +1,7 @@
 package khahliso.Commands;
 
 import khahliso.Cards;
+import khahliso.Game;
 import khahliso.Player;
 
 import java.util.Locale;
@@ -15,7 +16,7 @@ public abstract class Commands {
         this.argument = argument.trim();
     }
 
-    public abstract boolean execute(Player player, Cards cards);
+    public abstract boolean execute(Player player, Cards cards, Game game);
 
     public Commands(String name){
         this.name = name.trim().toLowerCase();
@@ -28,9 +29,12 @@ public abstract class Commands {
     public static Commands create(String instruction, Cards cards){
         String[] args = instruction.toUpperCase(Locale.ROOT).trim().split(" ");
 
-        if(!cards.getAllCards().contains(args[1])){
-            return new Replay();
+        if(args.length>1){
+            if(!cards.getAllCards().contains(args[1])){
+                return new Replay();
+            }
         }
+
 
         switch (args[0]){
             case "QUIT":

@@ -35,8 +35,8 @@ public class Player {
         this.Cards.remove(card);
     }
 
-    public boolean handleCommand(Commands command, Cards cards) {
-        return command.execute(this, cards);
+    public boolean handleCommand(Commands command, Cards cards, Game game) {
+        return command.execute(this, cards, game);
     }
     public void setStatus(String status){
         this.status = status;

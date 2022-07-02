@@ -17,4 +17,8 @@ public class Game {
         this.players.add(player);
     }
 
+    public void removePlayer(Player player){
+        this.players.remove(player);
+    }
+
 }

@@ -128,7 +128,7 @@ public class StartGame {
 
                     command = scanner.nextLine();
                     commands =Commands.create(command, cards);
-                    player.handleCommand(commands, cards);
+                    player.handleCommand(commands, cards, game);
                     System.out.println(player);
 
                 }

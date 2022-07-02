@@ -1,6 +1,7 @@
 package khahliso.Commands;
 
 import khahliso.Cards;
+import khahliso.Game;
 import khahliso.Player;
 
 public class ViewDescription extends Commands{
@@ -10,7 +11,7 @@ public class ViewDescription extends Commands{
     }
 
     @Override
-    public boolean execute(Player player, Cards cards) {
+    public boolean execute(Player player, Cards cards, Game game) {
         player.setStatus("Card Description\n" +
                 "JOKER BLACK/RED - If you play this card, the next player in the game will be shot with 6 cards\n" +
                 "                - This card is played with color, a JOKER_RED can be played if table card is HEART/DIAMOND\n" +

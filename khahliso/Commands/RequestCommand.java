@@ -1,6 +1,7 @@
 package khahliso.Commands;
 
 import khahliso.Cards;
+import khahliso.Game;
 import khahliso.Player;
 
 public class RequestCommand extends Commands{
@@ -10,7 +11,7 @@ public class RequestCommand extends Commands{
     }
 
     @Override
-    public boolean execute(Player player, Cards cards) {
+    public boolean execute(Player player, Cards cards, Game game) {
         return false;
     }
 }
